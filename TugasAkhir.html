@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team To-Do List</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f8fafc 0%, #A1E0FF 30%, #bae6fd 80%, #f0fdf4 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background: linear-gradient(90deg, #A1E0FF 0%, #53A3ED 50%, #A1E0FF 100%);
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar-nav li {
+            margin-left: 20px;
+        }
+
+        .navbar-nav a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .navbar-nav a:hover {
+            opacity: 0.8;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 30px;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 1000px;
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(90deg, #A1E0FF 0%, #53A3ED 50%, #A1E0FF 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .team-members {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .member {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+            border-right: 1px solid #eee;
+        }
+
+        .member:last-child {
+            border-right: none;
+        }
+
+        .member-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #4b6cb7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            margin-right: 12px;
+        }
+
+        .member-name {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .todo-list {
+            list-style-type: none;
+            margin-bottom: 20px;
+        }
+
+        .todo-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #f5f5f5;
+        }
+
+        .todo-item:last-child {
+            border-bottom: none;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+            transform: scale(1.2);
+            accent-color: #4b6cb7;
+        }
+
+        .todo-text {
+            flex: 1;
+            font-size: 15px;
+        }
+
+        input[type="checkbox"]:checked + .todo-text {
+            text-decoration: line-through;
+            color: #888;
+        }
+
+        .add-task {
+            display: flex;
+            margin-top: 15px;
+        }
+
+        .add-task input {
+            flex: 1;
+            padding: 10px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+            font-size: 14px;
+        }
+
+        .add-task button {
+            background-color: #4b6cb7;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .add-task button:hover {
+            background-color: #3a559d;
+        }
+
+        .instructions {
+            background-color: #f8f9fa;
+            padding: 15px 20px;
+            font-size: 14px;
+            color: #555;
+            border-top: 1px solid #eee;
+            line-height: 1.5;
+        }
+
+        .container-footer {
+            text-align: center;
+            padding: 15px;
+            color: #666;
+            font-size: 14px;
+            border-top: 1px solid #eee;
+        }
+
+        /* Page Footer */
+        .page-footer {
+            background: linear-gradient(90deg, #A1E0FF 0%, #53A3ED 50%, #A1E0FF 100%);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+        }
+
+        .page-footer p {
+            margin: 5px 0;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .footer-links li {
+            margin: 0 15px;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 900px) {
+            .team-members {
+                flex-direction: column;
+            }
+
+            .member {
+                border-right: none;
+                border-bottom: 1px solid #eee;
+                padding: 15px 20px;
+            }
+
+            .member:last-child {
+                border-bottom: none;
+            }
+
+            .navbar {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .navbar-nav li {
+                margin: 5px 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<!-- Navbar outside the container -->
+<nav class="navbar">
+    <div style="font-size: 20px;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: #4b6cb7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            margin-right: 16px;">T</div>
+    <div class="navbar-brand">Takly</div>
+</nav>
+
+<!-- Main content with the container -->
+<div class="main-content">
+    <div class="container">
+        <header>
+            <h1>Team To-Do List</h1>
+            <p class="subtitle">Track tasks for your entire team</p>
+        </header>
+
+        <div class="team-members">
+            <!-- You -->
+            <div class="member">
+                <div class="member-header">
+                    <div class="avatar">AF</div>
+                    <div class="member-name">Arief Firmansyah (Team Lead)</div>
+                </div>
+                <ul class="todo-list">
+                    <li class="todo-item">
+                        <input type="checkbox" id="task1">
+                        <label for="task1" class="todo-text">Complete project proposal</label>
+                    </li>
+                    <li class="todo-item">
+                        <input type="checkbox" id="task2" checked>
+                        <label for="task2" class="todo-text">Schedule team meeting</label>
+                    </li>
+                    <li class="todo-item">
+                        <input type="checkbox" id="task3">
+                        <label for="task3" class="todo-text">Review team tasks</label>
+                    </li>
+                </ul>
+                <div class="add-task">
+                    <input type="text" placeholder="New task...">
+                    <button>Add</button>
+                </div>
+            </div>
+
+            <!-- Person 1 -->
+            <div class="member">
+                <div class="member-header">
+                    <div class="avatar">Y</div>
+                    <div class="member-name">Yanuar Fariski</div>
+                </div>
+            </div>
+
+            <!-- Person 2 -->
+            <div class="member">
+                <div class="member-header">
+                    <div class="avatar">A</div>
+                    <div class="member-name">Ariel Farizan Arrafif</div>
+                </div>
+            </div>
+
+            <!-- Person 3 -->
+            <div class="member">
+                <div class="member-header">
+                    <div class="avatar">F</div>
+                    <div class="member-name">Faris Mu'taz Labib Mustofa</div>
+                </div>
+            </div>
+
+            <!-- Person 4 -->
+            <div class="member">
+                <div class="member-header">
+                    <div class="avatar">F</div>
+                    <div class="member-name">Fakhirah Yaumil Izza Muchlis</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <p><strong>Instructions:</strong> This to-do list is for your team's incubation project. Each section represents a team member. You can add tasks and mark them as completed. Note that tasks are stored in browser memory and may not persist after closing the browser.</p>
+        </div>
+
+        <div class="container-footer">
+            <p>Made with HTML and CSS only | For Team Incubation</p>
+        </div>
+    </div>
+</div>
+
+<!-- Footer outside the container -->
+<footer class="page-footer">
+    <p>&copy; 2025 TeamTask Inc. All rights reserved.</p>
+    <p>Productivity App for Teams</p>
+    <ul class="footer-links">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Support</a></li>
+    </ul>
+</footer>
+</body>
+</html>
