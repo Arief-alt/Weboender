@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tasklyx - Team Productivity</title>
+    <title>NexusTech - Innovative Technology Solutions</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -208,6 +208,7 @@
             }
             to {
                 opacity: 1;
+                transform: translateY(0);
             }
         }
 
@@ -248,7 +249,7 @@
             left: 100%;
         }
 
-        .features {
+        .services {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -259,7 +260,7 @@
             z-index: 1;
         }
 
-        .feature-card {
+        .service-card {
             background: white;
             border-radius: 15px;
             padding: 30px;
@@ -269,12 +270,12 @@
             text-align: center;
         }
 
-        .feature-card:hover {
+        .service-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
         }
 
-        .feature-icon {
+        .service-icon {
             font-size: 40px;
             color: var(--primary);
             margin-bottom: 20px;
@@ -286,77 +287,229 @@
             background: rgba(75, 108, 183, 0.1);
         }
 
-        .feature-card h3 {
+        .service-card h3 {
             font-size: 20px;
             margin-bottom: 15px;
             color: var(--dark);
         }
 
-        .feature-card p {
+        .service-card p {
             color: #5a6c7d;
             font-size: 14px;
             line-height: 1.5;
         }
 
-        .image-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 20px;
+        .stats-section {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 80px 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            position: relative;
+        }
+
+        .stats-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
             max-width: 1000px;
             width: 100%;
+        }
+
+        .stat-item {
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 18px;
+            color: #5a6c7d;
+        }
+
+        .testimonials-section {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 80px 20px;
+            position: relative;
+        }
+
+        .testimonials-container {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 1000px;
+            overflow: hidden;
+            padding: 40px;
+        }
+
+        .testimonials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
             margin-top: 30px;
+        }
+
+        .testimonial-card {
+            background: #f8fafc;
+            border-radius: 10px;
+            padding: 25px;
+            width: 300px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-card:before {
+            font-size: 60px;
+            color: var(--accent);
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            opacity: 0.3;
+            font-family: Georgia, serif;
+        }
+
+        .testimonial-text {
+            color: #5a6c7d;
+            font-style: italic;
+            margin-bottom: 20px;
             position: relative;
             z-index: 1;
         }
 
-        .grid-item {
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--gradient);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .author-info h4 {
+            color: var(--dark);
+            margin-bottom: 2px;
+        }
+
+        .author-info p {
+            color: #5a6c7d;
+            font-size: 12px;
+        }
+
+        .portfolio-section {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 80px 20px;
+            background-color: rgba(255, 255, 255, 0.7);
             position: relative;
+        }
+
+        .portfolio-container {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 1000px;
+            overflow: hidden;
+            padding: 40px;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .portfolio-item {
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.3s;
-            height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            cursor: pointer;
-            background-size: cover;
-            background-position: center;
+            background: #f8fafc;
         }
 
-        .grid-item:hover {
-            transform: translateY(-5px) scale(1.02);
+        .portfolio-item:hover {
+            transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
         }
 
-        .grid-item:nth-child(1) {
-            background: linear-gradient(135deg, #A1E0FF 0%, #53A3ED 100%);
+        .portfolio-image {
+            height: 180px;
+            background: var(--gradient);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 40px;
         }
 
-        .grid-item:nth-child(2) {
-            background: linear-gradient(135deg, #FFD1A1 0%, #FF8A53 100%);
+        .portfolio-content {
+            padding: 20px;
         }
 
-        .grid-item:nth-child(3) {
-            background: linear-gradient(135deg, #C2A1FF 0%, #8A53FF 100%);
+        .portfolio-content h3 {
+            color: var(--dark);
+            margin-bottom: 10px;
         }
 
-        .grid-item:nth-child(4) {
-            background: linear-gradient(135deg, #A1FFC2 0%, #53FF8A 100%);
+        .portfolio-content p {
+            color: #5a6c7d;
+            font-size: 14px;
+            margin-bottom: 15px;
         }
 
-        .todo-section {
+        .portfolio-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .portfolio-tag {
+            background: var(--accent);
+            color: var(--dark);
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 500;
+        }
+
+        .team-section {
             width: 100%;
             display: flex;
             justify-content: center;
-
+            padding: 80px 20px;
             position: relative;
         }
 
-        .container {
+        .team-container {
             background-color: white;
             border-radius: 12px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -366,6 +519,7 @@
             animation: fadeIn 0.8s ease-out;
             position: relative;
             z-index: 1;
+            padding: 40px;
         }
 
         @keyframes fadeIn {
@@ -373,257 +527,137 @@
             to { opacity: 1; }
         }
 
-        header {
-            background: var(--gradient);
-            color: white;
-            padding: 20px;
+        .section-header {
             text-align: center;
-            position: relative;
-            overflow: hidden;
+            margin-bottom: 40px;
         }
 
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
-            background-size: cover;
+        .section-header h2 {
+            font-size: 36px;
+            color: var(--dark);
+            margin-bottom: 10px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        h1 {
-            font-size: 28px;
-            margin-bottom: 5px;
-            position: relative;
-        }
-
-        .subtitle {
-            font-size: 14px;
-            opacity: 0.8;
-            position: relative;
+        .section-header p {
+            font-size: 18px;
+            color: #5a6c7d;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         .team-members {
             display: flex;
             flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
         }
 
-        .member {
-            flex: 1;
-            min-width: 300px;
+        .team-member {
+            background: white;
+            border-radius: 10px;
             padding: 20px;
-            border-right: 1px solid #eee;
+            width: 220px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.3s;
         }
 
-        .member:hover {
-            background-color: #f9f9f9;
-            transform: translateY(-2px);
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
         }
 
-        .member:last-child {
-            border-right: none;
-        }
-
-        .member-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #f0f0f0;
-        }
-
-        .avatar {
-            width: 40px;
-            height: 40px;
+        .member-avatar {
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
-            background-color: var(--primary);
+            background: var(--gradient);
             display: flex;
             justify-content: center;
             align-items: center;
             color: white;
+            font-size: 36px;
             font-weight: bold;
-            margin-right: 12px;
-            transition: transform 0.3s;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .member:hover .avatar {
-            transform: scale(1.1);
+            margin: 0 auto 15px;
+            box-shadow: 0 4px 10px rgba(75, 108, 183, 0.3);
         }
 
         .member-name {
             font-weight: 600;
             color: #333;
+            margin-bottom: 5px;
         }
 
-        .todo-list {
-            list-style-type: none;
-            margin-bottom: 20px;
+        .member-role {
+            color: var(--primary);
+            font-size: 14px;
+            margin-bottom: 10px;
         }
 
-        .todo-item {
+        .member-bio {
+            color: #5a6c7d;
+            font-size: 13px;
+            line-height: 1.4;
+        }
+
+        .contact-section {
+            width: 100%;
             display: flex;
-            align-items: center;
-            padding: 10px 10px;
-            border-bottom: 1px solid #f5f5f5;
-            transition: all 0.3s;
-            animation: slideIn 0.3s ease-out;
+            justify-content: center;
+            padding: 80px 20px;
+            background-color: rgba(255, 255, 255, 0.7);
             position: relative;
         }
 
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateX(-10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
+        .contact-container {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 1000px;
+            overflow: hidden;
+            padding: 40px;
         }
 
-        .todo-item:hover {
-            background-color: #f9f9f9;
-            transform: translateX(5px);
-        }
-
-        .todo-item:last-child {
-            border-bottom: none;
-        }
-
-        input[type="checkbox"] {
-            margin-right: 10px;
-            transform: scale(1.2);
-            accent-color: var(--primary);
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-
-        input[type="checkbox"]:hover {
-            transform: scale(1.3);
-        }
-
-        .todo-text {
-            flex: 1;
-            font-size: 15px;
-            transition: all 0.3s;
-        }
-
-        input[type="checkbox"]:checked + .todo-text {
-            text-decoration: line-through;
-            color: #888;
-            opacity: 0.7;
-        }
-
-        .deadline-badge {
-            background-color: var(--warning);
-            color: white;
-            font-size: 10px;
-            padding: 2px 6px;
-            border-radius: 10px;
-            margin-left: 8px;
-            font-weight: bold;
-            animation: pulse 2s infinite;
-        }
-
-        .deadline-overdue {
-            background-color: var(--danger);
-        }
-
-        .deadline-approaching {
-            background-color: var(--warning);
-        }
-
-        .deadline-normal {
-            background-color: var(--success);
-        }
-
-        .add-task {
+        .contact-info {
             display: flex;
-            margin-top: 15px;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
         }
 
-        .add-task input {
-            flex: 1;
-            padding: 10px 12px;
-            border: 1px solid #ddd;
-            border-radius: 4px 0 0 4px;
-            font-size: 14px;
-            transition: all 0.3s;
-        }
-
-        .add-task input:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 2px rgba(75, 108, 183, 0.2);
-        }
-
-        .add-task button {
-            background-color: var(--primary);
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 0 4px 4px 0;
-            cursor: pointer;
-            font-weight: 500;
-            transition: all 0.3s;
-        }
-
-        .add-task button:hover {
-            background-color: #3a559d;
-            transform: scale(1.05);
-        }
-
-        .deadline-input {
-            display: flex;
-            margin-top: 10px;
-            align-items: center;
-        }
-
-        .deadline-input label {
-            font-size: 12px;
-            color: #666;
-            margin-right: 8px;
-            white-space: nowrap;
-        }
-
-        .deadline-input input {
-            padding: 5px 8px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 12px;
-            width: 120px;
-        }
-
-        .instructions {
-            background-color: #f8f9fa;
-            padding: 15px 20px;
-            font-size: 14px;
-            color: #555;
-            border-top: 1px solid #eee;
-            line-height: 1.5;
-        }
-
-        .deadline-alerts {
-            background-color: #fff9e6;
-            border-left: 4px solid var(--warning);
-            padding: 15px 20px;
-            margin: 15px 0;
-            border-radius: 0 4px 4px 0;
-        }
-
-        .deadline-alerts h3 {
-            color: var(--warning);
-            margin-bottom: 10px;
+        .contact-item {
             display: flex;
             align-items: center;
+            flex: 1;
+            min-width: 250px;
         }
 
-        .deadline-alerts h3 i {
-            margin-right: 8px;
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--gradient);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+            margin-right: 15px;
+        }
+
+        .contact-details h3 {
+            font-size: 18px;
+            color: var(--dark);
+            margin-bottom: 5px;
+        }
+
+        .contact-details p {
+            color: #5a6c7d;
         }
 
         .about-section {
@@ -702,50 +736,6 @@
             transform: translateY(-2px);
         }
 
-        .progress-container {
-            width: 100%;
-            background-color: #f0f0f0;
-            border-radius: 5px;
-            margin: 15px 0;
-            height: 8px;
-            overflow: hidden;
-        }
-
-        .progress-bar {
-            height: 100%;
-            background: linear-gradient(90deg, #C6FFDD, #00F260);
-            border-radius: 5px;
-            transition: width 0.5s ease;
-        }
-
-        .progress-text {
-            text-align: center;
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 10px;
-        }
-
-        .notification {
-            position: fixed;
-            top: 100px;
-            right: 20px;
-            background: var(--primary);
-            color: white;
-            padding: 15px 20px;
-            border-radius: 5px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            transform: translateX(150%);
-            transition: transform 0.3s ease;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-        }
-
-        .notification i {
-            margin-right: 10px;
-            font-size: 20px;
-        }
-
         .particles {
             position: absolute;
             top: 0;
@@ -753,6 +743,13 @@
             width: 100%;
             height: 100%;
             z-index: 0;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            animation: floatParticle 15s infinite linear;
         }
 
         @keyframes floatParticle {
@@ -773,20 +770,6 @@
         }
 
         @media (max-width: 900px) {
-            .team-members {
-                flex-direction: column;
-            }
-
-            .member {
-                border-right: none;
-                border-bottom: 1px solid #eee;
-                padding: 15px 20px;
-            }
-
-            .member:last-child {
-                border-bottom: none;
-            }
-
             .navbar {
                 flex-direction: column;
                 padding: 10px;
@@ -810,13 +793,27 @@
                 font-size: 18px;
             }
 
-            .image-grid {
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            }
-
-            .features {
+            .services {
                 flex-direction: column;
                 align-items: center;
+            }
+
+            .team-members {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-info {
+                flex-direction: column;
+            }
+
+            .testimonials {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -825,25 +822,22 @@
 <body>
 <nav class="navbar">
     <div class="navbar-brand">
-        <div class="logo">T</div>
-        <span>Tasklyx</span>
+        <div class="logo">N</div>
+        <span>NexusTech</span>
     </div>
     <ul class="navbar-nav">
         <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#todo">Team Tasks</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#team">Our Team</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
 
-<div class="notification" id="notification">
-    <i class="fas fa-check-circle"></i>
-    <span>Task added successfully!</span>
-</div>
-
 <section id="home" class="landing-page">
     <div class="floating-shapes">
-        <div class="shape"></div>
-        <div class="shape"></div>
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
@@ -851,184 +845,242 @@
     <div class="particles" id="particles"></div>
 
     <div class="hero">
-        <h1>Boost Your Team's Productivity</h1>
-        <p>Tasklyx helps your team stay organized, collaborate effectively, and achieve more together. Simple, intuitive, and powerful task management for teams of all sizes.</p>
-        <a class="cta-button" id="get-started-btn">Get Started Now</a>
+        <h1>Innovative Technology Solutions</h1>
+        <p>NexusTech delivers cutting-edge software development, digital transformation, and IT consulting services to help businesses thrive in the digital age.</p>
+        <a class="cta-button" id="contact-btn">Get In Touch</a>
     </div>
 
-    <div class="features">
-        <div class="feature-card">
-            <div class="feature-icon">
-                <i class="fas fa-tasks"></i>
+    <div class="services" id="services">
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="fas fa-code"></i>
             </div>
-            <h3>Task Management</h3>
-            <p>Easily create, assign, and track tasks across your entire team with our intuitive interface.</p>
+            <h3>Custom Software</h3>
+            <p>Tailored software solutions designed to meet your specific business needs and drive growth.</p>
         </div>
-        <div class="feature-card">
-            <div class="feature-icon">
-                <i class="fas fa-users"></i>
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="fas fa-cloud"></i>
             </div>
-            <h3>Team Collaboration</h3>
-            <p>Work together seamlessly with real-time updates and comments on shared tasks.</p>
+            <h3>Cloud Solutions</h3>
+            <p>Scalable cloud infrastructure and migration services to optimize your operations.</p>
         </div>
-        <div class="feature-card">
-            <div class="feature-icon">
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3>Mobile Apps</h3>
+            <p>Engaging mobile applications for iOS and Android that connect you with your customers.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">
                 <i class="fas fa-chart-line"></i>
             </div>
-            <h3>Progress Tracking</h3>
-            <p>Monitor team progress with visual charts and detailed analytics to stay on target.</p>
+            <h3>Data Analytics</h3>
+            <p>Transform your data into actionable insights with our advanced analytics solutions.</p>
         </div>
-        <div class="feature-card">
-            <div class="feature-icon">
-                <i class="fas fa-bell"></i>
-            </div>
-            <h3>Deadline Alerts</h3>
-            <p>Never miss a deadline with customizable notifications and reminder systems.</p>
-        </div>
-    </div>
-
-    <div class="image-grid">
-        <div class="grid-item">Task Management</div>
-        <div class="grid-item">Team Collaboration</div>
-        <div class="grid-item">Progress Tracking</div>
-        <div class="grid-item">Deadline Alerts</div>
     </div>
 </section>
 
-<section id="todo" class="todo-section">
-    <div class="container">
-        <header>
-            <h1>Team To-Do List</h1>
-            <p class="subtitle">Track tasks for your entire team</p>
+<section class="stats-section">
+    <div class="stats-container">
+        <div class="stat-item">
+            <div class="stat-number" id="clients-count">150+</div>
+            <div class="stat-label">Happy Clients</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number" id="projects-count">300+</div>
+            <div class="stat-label">Projects Completed</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number" id="team-count">25+</div>
+            <div class="stat-label">Expert Team Members</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number" id="years-count">8</div>
+            <div class="stat-label">Years of Experience</div>
+        </div>
+    </div>
+</section>
 
-            <div class="progress-text">Team Progress: <span id="progress-percent">0%</span></div>
-            <div class="progress-container">
-                <div class="progress-bar" id="progress-bar" style="width: 0%"></div>
-            </div>
-        </header>
+<section id="team" class="team-section">
 
-        <div class="deadline-alerts" id="deadline-alerts">
-            <h3><i class="fas fa-exclamation-triangle"></i> Deadline Alerts</h3>
-            <div id="alerts-container"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+
+    <div class="team-container">
+        <div class="section-header">
+            <h2>Our Expert Team</h2>
+            <p>Meet the talented professionals behind our success</p>
         </div>
 
         <div class="team-members">
-            <div class="member">
-                <div class="member-header">
-                    <div class="avatar">AF</div>
-                    <div class="member-name">Arief Firmansyah (Team Lead)</div>
-                </div>
-                <ul class="todo-list">
-                    <li class="todo-item">
-                        <input type="checkbox" id="task1">
-                        <label for="task1" class="todo-text">Complete project proposal</label>
-                        <span class="deadline-badge deadline-overdue" data-deadline="2023-10-15">OVERDUE</span>
-                    </li>
-                    <li class="todo-item">
-                        <input type="checkbox" id="task2">
-                        <label for="task2" class="todo-text">Schedule team meeting</label>
-                        <span class="deadline-badge deadline-approaching" data-deadline="2023-11-05">DUE SOON</span>
-                    </li>
-                    <li class="todo-item">
-                        <input type="checkbox" id="task3">
-                        <label for="task3" class="todo-text">Review team tasks</label>
-                        <span class="deadline-badge deadline-normal" data-deadline="2023-11-20">ON TRACK</span>
-                    </li>
-                </ul>
-                <div class="add-task">
-                    <input type="text" placeholder="New task...">
-                    <button>Add</button>
-                </div>
-                <div class="deadline-input">
-                    <label for="deadline1">Deadline:</label>
-                    <input type="date" id="deadline1">
-                </div>
+            <div class="team-member">
+                <div class="member-avatar">AF</div>
+                <div class="member-name">Arief Firmansyah</div>
+                <div class="member-role">CEO & Founder</div>
+                <div class="member-bio">Visionary leader with 15+ years in tech industry and business strategy.</div>
             </div>
 
-            <div class="member">
-                <div class="member-header">
-                    <div class="avatar">Y</div>
-                    <div class="member-name">Yanuar Fariski</div>
-                </div>
+            <div class="team-member">
+                <div class="member-avatar">YF</div>
+                <div class="member-name">Yanuar Fariski</div>
+                <div class="member-role">CTO</div>
+                <div class="member-bio">Technology expert specializing in software architecture and innovation.</div>
             </div>
 
-            <div class="member">
-                <div class="member-header">
-                    <div class="avatar">A</div>
-                    <div class="member-name">Ariel Farizan Arrafif</div>
-                </div>
+            <div class="team-member">
+                <div class="member-avatar">AF</div>
+                <div class="member-name">Ariel Farizan Arrafif</div>
+                <div class="member-role">Lead Designer</div>
+                <div class="member-bio">Creative designer focused on user experience and interface design.</div>
             </div>
 
-            <div class="member">
-                <div class="member-header">
-                    <div class="avatar">F</div>
-                    <div class="member-name">Faris Mu'taz Labib Mustofa</div>
-                </div>
+            <div class="team-member">
+                <div class="member-avatar">FM</div>
+                <div class="member-name">Faris Mu'taz Labib Mustofa</div>
+                <div class="member-role">Senior Developer</div>
+                <div class="member-bio">Full-stack developer with expertise in modern web technologies.</div>
             </div>
 
-            <div class="member">
-                <div class="member-header">
-                    <div class="avatar">F</div>
-                    <div class="member-name">Fakhirah Yaumil Izza Muchlis</div>
-                </div>
+            <div class="team-member">
+                <div class="member-avatar">FY</div>
+                <div class="member-name">Fakhirah Yaumil Izza Muchlis</div>
+                <div class="member-role">Project Manager</div>
+                <div class="member-bio">Experienced in agile methodologies and client relationship management.</div>
             </div>
-        </div>
-
-        <div class="instructions">
-            <p><strong>Instructions:</strong> This to-do list is for your team's incubation project. Each section represents a team member. You can add tasks and mark them as completed. Note that tasks are stored in browser memory and may not persist after closing the browser.</p>
-            <p><strong>Deadline Alerts:</strong> Tasks with deadlines will show colored badges (red for overdue, orange for approaching, green for on track). The alerts section at the top shows all upcoming and overdue deadlines.</p>
         </div>
     </div>
 </section>
 
 <section id="about" class="about-section">
     <div class="about-content">
-        <h2>About Tasklyx</h2>
-        <p>Tasklyx is a simple yet powerful task management tool designed specifically for teams. Our mission is to help teams collaborate more effectively by providing an intuitive platform for tracking tasks and progress.</p>
-        <p>Built with simplicity in mind, Tasklyx requires no complex setup or learning curve. Your team can start being productive from day one.</p>
+        <h2>About NexusTech</h2>
+    </div>
+</section>
+
+<section id="portfolio" class="portfolio-section">
+    <div class="portfolio-container">
+        <div class="section-header">
+            <h2>Our Portfolio</h2>
+            <p>Explore some of our recent successful projects and solutions</p>
+        </div>
+
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <div class="portfolio-image">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+            </div>
+
+            <div class="portfolio-item">
+                <div class="portfolio-image">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+            </div>
+
+            <div class="portfolio-item">
+                <div class="portfolio-image">
+                    <i class="fas fa-chart-bar"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="testimonials" class="testimonials-section">
+
+    <div class="shape"></div>
+    <div class="shape"></div>
+
+    <div class="testimonials-container">
+        <div class="section-header">
+            <h2>Client Testimonials</h2>
+            <p>See what our clients have to say about working with us</p>
+        </div>
+
+        <div class="testimonials">
+            <div class="testimonial-card">
+
+            </div>
+
+            <div class="testimonial-card">
+
+            </div>
+
+            <div class="testimonial-card">
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact-section">
+    <div class="contact-container">
+        <div class="section-header">
+            <h2>Get In Touch</h2>
+            <p>Ready to transform your business? Contact us today for a free consultation.</p>
+        </div>
+
+        <div class="contact-info">
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
 <footer class="page-footer">
-    <p>&copy; 2025 Tasklyx Inc. All rights reserved.</p>
-    <p>Productivity App for Teams</p>
+    <p>&copy; 2025 NexusTech. All rights reserved.</p>
+    <p>Innovative Technology Solutions</p>
     <ul class="footer-links">
         <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
-        <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
         <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+        <li><a href="#"><i class="fab fa-github"></i> GitHub</a></li>
     </ul>
 </footer>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const navLinks = document.querySelectorAll('.navbar-nav a');
-        const notification = document.getElementById('notification');
-        const progressBar = document.getElementById('progress-bar');
-        const progressPercent = document.getElementById('progress-percent');
         const particlesContainer = document.getElementById('particles');
-        const deadlineAlerts = document.getElementById('deadline-alerts');
-        const alertsContainer = document.getElementById('alerts-container');
+        const contactBtn = document.getElementById('contact-btn');
 
-        // Create floating particles
         function createParticles() {
             for (let i = 0; i < 30; i++) {
                 const particle = document.createElement('div');
                 particle.classList.add('particle');
 
-                // Random size between 2 and 6px
                 const size = Math.random() * 4 + 2;
                 particle.style.width = `${size}px`;
                 particle.style.height = `${size}px`;
 
-                // Random position
                 particle.style.left = `${Math.random() * 100}%`;
                 particle.style.top = `${Math.random() * 100}%`;
 
-                // Random animation duration
                 const duration = Math.random() * 10 + 10;
                 particle.style.animationDuration = `${duration}s`;
 
-                // Random delay
                 particle.style.animationDelay = `${Math.random() * 5}s`;
 
                 particlesContainer.appendChild(particle);
@@ -1037,111 +1089,44 @@
 
         createParticles();
 
-        // Deadline management functions
-        function getDeadlineStatus(deadline) {
-            const today = new Date();
-            const deadlineDate = new Date(deadline);
-            const diffTime = deadlineDate - today;
-            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-
-            if (diffDays < 0) {
-                return 'overdue';
-            } else if (diffDays <= 3) {
-                return 'approaching';
-            } else {
-                return 'normal';
-            }
-        }
-
-        function updateDeadlineBadges() {
-            const deadlineBadges = document.querySelectorAll('.deadline-badge');
-
-            deadlineBadges.forEach(badge => {
-                const deadline = badge.getAttribute('data-deadline');
-                const status = getDeadlineStatus(deadline);
-
-                badge.classList.remove('deadline-overdue', 'deadline-approaching', 'deadline-normal');
-
-                if (status === 'overdue') {
-                    badge.classList.add('deadline-overdue');
-                    badge.textContent = 'OVERDUE';
-                } else if (status === 'approaching') {
-                    badge.classList.add('deadline-approaching');
-                    badge.textContent = 'DUE SOON';
+        function animateCounter(element, finalValue, duration = 2000) {
+            let start = 0;
+            const increment = finalValue / (duration / 16);
+            const timer = setInterval(() => {
+                start += increment;
+                if (start >= finalValue) {
+                    element.textContent = finalValue + (element.id === 'years-count' ? '' : '+');
+                    clearInterval(timer);
                 } else {
-                    badge.classList.add('deadline-normal');
-                    badge.textContent = 'ON TRACK';
+                    element.textContent = Math.floor(start) + (element.id === 'years-count' ? '' : '+');
+                }
+            }, 16);
+        }
+
+        const observerOptions = {
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(document.getElementById('clients-count'), 150);
+                    animateCounter(document.getElementById('projects-count'), 300);
+                    animateCounter(document.getElementById('team-count'), 25);
+                    animateCounter(document.getElementById('years-count'), 8);
+                    observer.disconnect();
                 }
             });
-        }
+        }, observerOptions);
 
-        function updateDeadlineAlerts() {
-
-            alertsContainer.innerHTML = '';
-
-            const deadlineBadges = document.querySelectorAll('.deadline-badge');
-            const alerts = [];
-
-            deadlineBadges.forEach(badge => {
-                const deadline = badge.getAttribute('data-deadline');
-                const status = getDeadlineStatus(deadline);
-                const taskText = badge.closest('.todo-item').querySelector('.todo-text').textContent;
-                const memberName = badge.closest('.member').querySelector('.member-name').textContent;
-
-                if (status !== 'normal') {
-                    alerts.push({
-                        task: taskText,
-                        member: memberName,
-                        deadline: deadline,
-                        status: status
-                    });
-                }
-            });
-
-            alerts.sort((a, b) => new Date(a.deadline) - new Date(b.deadline));
-
-            if (alerts.length === 0) {
-                alertsContainer.innerHTML = '<p>No deadline alerts at this time.</p>';
-                deadlineAlerts.style.display = 'none';
-            } else {
-                deadlineAlerts.style.display = 'block';
-
-                alerts.forEach(alert => {
-                    const alertItem = document.createElement('div');
-                    alertItem.classList.add('alert-item');
-
-                    const alertText = document.createElement('div');
-                    alertText.classList.add('alert-text');
-                    if (alert.status === 'overdue') {
-                        alertText.classList.add('alert-overdue');
-                    }
-                    alertText.innerHTML = `<strong>${alert.task}</strong> - ${alert.member}`;
-
-                    const alertTime = document.createElement('div');
-                    alertTime.classList.add('alert-time');
-                    alertTime.textContent = formatDate(alert.deadline);
-
-                    alertItem.appendChild(alertText);
-                    alertItem.appendChild(alertTime);
-                    alertsContainer.appendChild(alertItem);
-                });
-            }
-        }
-
-        function formatDate(dateString) {
-            const options = { year: 'numeric', month: 'short', day: 'numeric' };
-            return new Date(dateString).toLocaleDateString(undefined, options);
-        }
-
-        updateDeadlineBadges();
-        updateDeadlineAlerts();
+        observer.observe(document.querySelector('.stats-section'));
 
         window.addEventListener('scroll', function() {
             const scrollPos = window.scrollY + 100;
 
             navLinks.forEach(link => {
                 const section = document.querySelector(link.getAttribute('href'));
-                if (section.offsetTop <= scrollPos && section.offsetTop + section.offsetHeight > scrollPos) {
+                if (section && section.offsetTop <= scrollPos && section.offsetTop + section.offsetHeight > scrollPos) {
                     navLinks.forEach(l => l.classList.remove('active'));
                     link.classList.add('active');
                 }
@@ -1163,116 +1148,15 @@
             });
         });
 
-        function smoothScrollTo(targetId) {
-            const targetSection = document.getElementById(targetId);
-            if (targetSection) {
+        contactBtn.addEventListener('click', function() {
+            const contactSection = document.getElementById('contact');
+            if (contactSection) {
                 window.scrollTo({
-                    top: targetSection.offsetTop - 80,
+                    top: contactSection.offsetTop - 80,
                     behavior: 'smooth'
                 });
             }
-        }
-
-        const getStartedBtn = document.getElementById('get-started-btn');
-        getStartedBtn.addEventListener('click', function() {
-            smoothScrollTo('todo');
         });
-
-        function showNotification(message) {
-            notification.querySelector('span').textContent = message;
-            notification.classList.add('show');
-            setTimeout(() => {
-                notification.classList.remove('show');
-            }, 3000);
-        }
-
-        function updateProgress() {
-            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-            const checked = document.querySelectorAll('input[type="checkbox"]:checked');
-            const progress = (checked.length / checkboxes.length) * 100;
-
-            progressBar.style.width = `${progress}%`;
-            progressPercent.textContent = `${Math.round(progress)}%`;
-
-            if (progress === 100 && checkboxes.length > 0) {
-                showNotification('🎉 All tasks completed! Great job team!');
-            }
-        }
-
-        const addTaskButtons = document.querySelectorAll('.add-task button');
-        addTaskButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const input = this.previousElementSibling;
-                const taskText = input.value.trim();
-                const deadlineInput = this.closest('.member').querySelector('.deadline-input input');
-                const deadline = deadlineInput.value;
-
-                if (taskText) {
-                    const todoList = this.closest('.member').querySelector('.todo-list');
-                    const newId = 'task-' + Date.now();
-
-                    const newItem = document.createElement('li');
-                    newItem.className = 'todo-item';
-
-                    let deadlineBadge = '';
-                    if (deadline) {
-                        const status = getDeadlineStatus(deadline);
-                        const statusClass = status === 'overdue' ? 'deadline-overdue' :
-                            status === 'approaching' ? 'deadline-approaching' : 'deadline-normal';
-                        const statusText = status === 'overdue' ? 'OVERDUE' :
-                            status === 'approaching' ? 'DUE SOON' : 'ON TRACK';
-
-                        deadlineBadge = `<span class="deadline-badge ${statusClass}" data-deadline="${deadline}">${statusText}</span>`;
-                    }
-
-                    newItem.innerHTML = `
-                        <input type="checkbox" id="${newId}">
-                        <label for="${newId}" class="todo-text">${taskText}</label>
-                        ${deadlineBadge}
-                    `;
-
-                    const newCheckbox = newItem.querySelector('input[type="checkbox"]');
-                    newCheckbox.addEventListener('change', updateProgress);
-
-                    todoList.appendChild(newItem);
-                    input.value = '';
-                    deadlineInput.value = '';
-
-                    showNotification('Task added successfully!');
-                    updateProgress();
-                    updateDeadlineBadges();
-                    updateDeadlineAlerts();
-                }
-            });
-        });
-
-        const taskInputs = document.querySelectorAll('.add-task input');
-        taskInputs.forEach(input => {
-            input.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    this.nextElementSibling.click();
-                }
-            });
-        });
-
-        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-        checkboxes.forEach(checkbox => {
-            checkbox.addEventListener('change', updateProgress);
-        });
-
-        updateProgress();
-
-        const gridItems = document.querySelectorAll('.grid-item');
-        gridItems.forEach(item => {
-            item.addEventListener('click', function() {
-                smoothScrollTo('todo');
-            });
-        });
-
-        setInterval(function() {
-            updateDeadlineBadges();
-            updateDeadlineAlerts();
-        }, 60000);
     });
 </script>
 </body>
