@@ -818,27 +818,35 @@
         }
     .container {
     display: flex;
-    align-items: center; 
-    gap: 10px; 
-    padding-bottom: 10px;  
-    border-bottom: 2px solid #ddd; 
-    margin-bottom: 15px;  
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 15px; 
     }
     .gambaruser {
-        width: 50px;
+        width: 60px;
         border-radius: 50%;
+    }
+       .gambaruser2 {
+        width: 100px;
+        border-radius: 50%;
+        margin-bottom: 0%;
     }
     .judul {
         margin: 0;
+        text-align: center;
     }
     .judul2 {
         margin: 0; 
         font-size: 14px; 
         color: gray;
+        text-align: center;
     }
     .text {
         display: flex;
-        flex-direction: column; 
+        flex-direction: column ; 
     }
     .btndetail {
         display: block;
@@ -892,8 +900,39 @@
     }
     .judulpop {
         margin: 0%;
-        margin-right: 65px;
+        text-align: center;
     }
+    .rating {
+    display: flex;
+    gap: 3px;
+    margin-top: 8px;
+    font-size: 25px;
+    color: #FFD700;
+    justify-content: center;
+    margin-bottom: 4px;
+}
+
+.star {
+    cursor: default;
+}
+
+  .btn-cancel {
+    background-color: #dc3545; 
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+    transition: 0.3s ease;
+ position: fixed;
+  bottom: 10px;
+  right: 20px;
+  }
+  .btn-cancel:hover {
+    background-color: #b02a37;
+  }
     
     </style>
 </head>
@@ -1087,64 +1126,86 @@
                     
                 <img src="https://img.freepik.com/vektor-gratis/lingkaran-biru-dengan-pengguna-putih_78370-4707.jpg" alt="" class="gambaruser">             
                 <div class="text">   
-                <h2 class="judul">NAME</h2>
+                <h3 class="judul">ARIEL FARIZAN. A.</h3>
             <p class="judul2">CEO, techsolution Inc.</p>
+<div class="rating">
+    <span class="star">&#9733;</span>
+    <span class="star">&#9733;</span>
+    <span class="star">&#9733;</span>
+    <span class="star">&#9733;</span>
+    <span class="star">&#9734;</span>
+</div>
                     </div>
             </div>
                 
 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam ipsa magni dolorum, repellat eveniet distinctio iusto molestiae aperiam tempora quaerat aliquid est voluptatibus quasi ipsum unde eaque! Ipsum, molestias. Tenetur!</p>
 <br>
-  <button class="btndetail" id="openModal"><b> Lihat Lebih Detail </b> &nbsp;<i class="fas fa-chevron-right"></i></button>
+  <button class="btndetail" id="openModal">Lihat Lebih Detail &nbsp;<i class="fas fa-chevron-right"></i></button>
             </div>
-            <div id="myModal" class="modal">
+<div id="myModal" class="modal">
   <div class="modaldetail">
     <span class="exit" id="closeModal">&times;</span>
-  <div class="container">
-                    
-                <img src="https://img.freepik.com/vektor-gratis/lingkaran-biru-dengan-pengguna-putih_78370-4707.jpg" alt="" class="gambaruser">             
-                <div class="text">   
-                <h2 class="judulpop">NAME</h2>
-            <p class="judul2">CEO, techsolution Inc.</p>
-                    </div>
-            </div>
 
-                
-<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam ipsa magni dolorum, repellat eveniet distinctio iusto molestiae aperiam tempora quaerat aliquid est voluptatibus quasi ipsum unde eaque! Ipsum, molestias. Tenetur!</p>              
-<br>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae expedita iure doloremque eaque tempore, ex corporis cupiditate quis nobis adipisci voluptate nesciunt, libero rem molestias. Consequatur, aliquid saepe? Ducimus, nemo!</p> 
-<br>
-<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa enim temporibus sequi optio alias vitae magni ipsum fugit pariatur magnam tenetur, neque voluptatem eos excepturi distinctio eveniet id et obcaecati?</p>
+    <div class="container">
+      <img src="https://img.freepik.com/vektor-gratis/lingkaran-biru-dengan-pengguna-putih_78370-4707.jpg" alt="" class="gambaruser2">             
+      <div class="text">   
+        <h2 class="judulpop">ARIEL FARIZAN ARRAFIF</h2>
+        <p class="judul2">CEO, techsolution Inc.</p>
+      </div>
+      <div class="rating">
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9734;</span>
+      </div>  
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium eum cupiditate accusamus dolore, a reprehenderit in architecto, iste rerum iusto eos unde omnis, nam quae quisquam cumque temporibus similique inventore?</p>              
+    <br>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio, iusto non distinctio magni error hic qui aliquid explicabo quas tempore recusandae, aut dolores. Vero id facilis enim cum repellat hic.</p> 
+    <br>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eius, fugit sapiente aspernatur molestiae sit perspiciatis earum quisquam ea libero nobis, rerum neque. Nobis voluptate nulla, repudiandae tenetur molestiae ut.</p>
+<br><br>    
+    <button id="cancelModal" class="btn-cancel">Cancel</button>  
 </div>
 </div>
 <script>
-    const modal = document.getElementById("myModal");
-    const btn = document.getElementById("openModal");
-    const span = document.getElementById("closeModal");
+  const modal = document.getElementById("myModal");
+  const btn = document.getElementById("openModal");
+  const span = document.getElementById("closeModal");
+  const cancelBtn = document.getElementById("cancelModal");
 
-    btn.onclick = function() {
-      modal.style.display = "block";
-      setTimeout(() => {
-        modal.classList.add("show");
-      }, 10); 
-    }
+  btn.onclick = function() {
+    modal.style.display = "block";
+    setTimeout(() => {
+      modal.classList.add("show");
+    }, 10); 
+  }
 
-    span.onclick = function() {
+  span.onclick = function() {
+    modal.classList.remove("show");
+    setTimeout(() => {
+      modal.style.display = "none";
+    }, 300); 
+  }
+
+  cancelBtn.onclick = function() {
+    modal.classList.remove("show");
+    setTimeout(() => {
+      modal.style.display = "none";
+    }, 300);
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
       modal.classList.remove("show");
       setTimeout(() => {
         modal.style.display = "none";
-      }, 300); 
+      }, 300);
     }
-
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.classList.remove("show");
-        setTimeout(() => {
-          modal.style.display = "none";
-        }, 300);
-      }
-    }
+  }
 </script>
-
             <div class="testimonial-card">
                   <h2>JUDUL</h2>
                 <br>
