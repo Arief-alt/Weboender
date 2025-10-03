@@ -6,6 +6,7 @@
     <title>NexusTech - Innovative Technology Solutions</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* Reset dan variabel */
         * {
             margin: 0;
             padding: 0;
@@ -34,6 +35,7 @@
             overflow-x: hidden;
         }
 
+        /* Navbar */
         .navbar {
             background: linear-gradient(90deg, #A1E0FF 0%, #53A3ED 50%, #A1E0FF 100%);
             color: white;
@@ -71,12 +73,6 @@
             box-shadow: 0 4px 10px rgba(75, 108, 183, 0.3);
         }
 
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-
         .navbar-nav {
             display: flex;
             list-style: none;
@@ -106,6 +102,7 @@
             background-color: rgba(255, 255, 255, 0.3);
         }
 
+        /* Landing Page */
         .landing-page {
             flex: 1;
             display: flex;
@@ -169,15 +166,6 @@
             animation-delay: -15s;
         }
 
-        @keyframes float {
-            0% {
-                transform: translate(0, 0) rotate(0deg);
-            }
-            100% {
-                transform: translate(100px, -100px) rotate(360deg);
-            }
-        }
-
         .hero {
             max-width: 800px;
             margin-bottom: 60px;
@@ -199,17 +187,6 @@
             line-height: 1.6;
             margin-bottom: 30px;
             animation: fadeInUp 1s ease-out 0.2s both;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         .cta-button {
@@ -299,6 +276,7 @@
             line-height: 1.5;
         }
 
+        /* Stats Section */
         .stats-section {
             width: 100%;
             display: flex;
@@ -335,172 +313,7 @@
             color: #5a6c7d;
         }
 
-        .testimonials-section {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            padding: 80px 20px;
-            position: relative;
-        }
-
-        .testimonials-container {
-            background-color: white;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            width: 100%;
-            max-width: 1000px;
-            overflow: hidden;
-            padding: 40px;
-        }
-
-        .testimonials {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            justify-content: center;
-            margin-top: 30px;
-        }
-
-        .testimonial-card {
-            background: #f8fafc;
-            border-radius: 10px;
-            padding: 25px;
-            width: 250px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
-            transition: all 0,6s;
-            position: relative;
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-
-        .testimonial-card:before {
-            font-size: 60px;
-            color: var(--accent);
-            position: absolute;
-            top: 10px;
-            left: 15px;
-            opacity: 0.3;
-            font-family: Georgia, serif;
-        }
-
-        .testimonial-text {
-            color: #5a6c7d;
-            font-style: italic;
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-        }
-
-        .author-avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: var(--gradient);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            font-weight: bold;
-            margin-right: 10px;
-        }
-
-        .author-info h4 {
-            color: var(--dark);
-            margin-bottom: 2px;
-        }
-
-        .author-info p {
-            color: #5a6c7d;
-            font-size: 12px;
-        }
-
-        .portfolio-section {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            padding: 80px 20px;
-            background-color: rgba(255, 255, 255, 0.7);
-            position: relative;
-        }
-
-        .portfolio-container {
-            background-color: white;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            width: 100%;
-            max-width: 1000px;
-            overflow: hidden;
-            padding: 40px;
-        }
-
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
-        }
-
-        .portfolio-item {
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s;
-            background: #f8fafc;
-        }
-
-        .portfolio-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-        }
-
-        .portfolio-image {
-            height: 180px;
-            background: var(--gradient);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            font-size: 40px;
-        }
-
-        .portfolio-content {
-            padding: 20px;
-        }
-
-        .portfolio-content h3 {
-            color: var(--dark);
-            margin-bottom: 10px;
-        }
-
-        .portfolio-content p {
-            color: #5a6c7d;
-            font-size: 14px;
-            margin-bottom: 15px;
-        }
-
-        .portfolio-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 5px;
-        }
-
-        .portfolio-tag {
-            background: var(--accent);
-            color: var(--dark);
-            padding: 3px 8px;
-            border-radius: 12px;
-            font-size: 11px;
-            font-weight: 500;
-        }
-
+        /* Team Section */
         .team-section {
             width: 100%;
             display: flex;
@@ -516,15 +329,7 @@
             width: 100%;
             max-width: 1000px;
             overflow: hidden;
-            animation: fadeIn 0.8s ease-out;
-            position: relative;
-            z-index: 1;
             padding: 40px;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
         }
 
         .section-header {
@@ -604,6 +409,220 @@
             line-height: 1.4;
         }
 
+        /* About Section */
+        .about-section {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 80px 20px;
+            position: relative;
+        }
+
+        .about-content {
+            max-width: 800px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-content h2 {
+            font-size: 36px;
+            color: var(--dark);
+            margin-bottom: 20px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .about-content p {
+            font-size: 18px;
+            color: #5a6c7d;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Portfolio Section Styles */
+        .portfolio-section {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 80px 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            position: relative;
+        }
+
+        .portfolio-container {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 1200px;
+            overflow: hidden;
+            padding: 40px;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(45deg, #87c3ff, #0059b3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .project-image svg {
+            width: 64px;
+            height: 64px;
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-card h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .project-card p {
+            color: #5a6c7d;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background-color: #e3f2fd;
+            color: #1976d2;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 80px 20px;
+            position: relative;
+        }
+
+        .testimonials-container {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 1000px;
+            overflow: hidden;
+            padding: 40px;
+        }
+
+        .testimonials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .testimonial-card {
+            background: #f8fafc;
+            border-radius: 10px;
+            padding: 25px;
+            width: 250px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
+            transition: all 0.6s;
+            position: relative;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-card:before {
+            font-size: 60px;
+            color: var(--accent);
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            opacity: 0.3;
+            font-family: Georgia, serif;
+        }
+
+        .testimonial-text {
+            color: #5a6c7d;
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--gradient);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .author-info h4 {
+            color: var(--dark);
+            margin-bottom: 2px;
+        }
+
+        .author-info p {
+            color: #5a6c7d;
+            font-size: 12px;
+        }
+
+        /* Contact Section */
         .contact-section {
             width: 100%;
             display: flex;
@@ -660,42 +679,7 @@
             color: #5a6c7d;
         }
 
-        .about-section {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            padding: 80px 20px;
-            position: relative;
-        }
-
-        .about-content {
-            max-width: 800px;
-            text-align: center;
-            position: relative;
-            z-index: 1;
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .about-content h2 {
-            font-size: 36px;
-            color: var(--dark);
-            margin-bottom: 20px;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .about-content p {
-            font-size: 18px;
-            color: #5a6c7d;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
+        /* Footer */
         .page-footer {
             background: var(--gradient);
             color: white;
@@ -736,6 +720,7 @@
             transform: translateY(-2px);
         }
 
+        /* Particles */
         .particles {
             position: absolute;
             top: 0;
@@ -750,6 +735,38 @@
             background: rgba(255, 255, 255, 0.5);
             border-radius: 50%;
             animation: floatParticle 15s infinite linear;
+        }
+
+        /* Animations */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            100% {
+                transform: translate(100px, -100px) rotate(360deg);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
         @keyframes floatParticle {
@@ -769,6 +786,171 @@
             }
         }
 
+        /* Testimonial Modal Styles */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ddd;
+            margin-bottom: 15px;
+        }
+
+        .gambaruser {
+            width: 60px;
+            border-radius: 50%;
+        }
+
+        .gambaruser2 {
+            width: 100px;
+            border-radius: 50%;
+            margin-bottom: 0%;
+        }
+
+        .judul {
+            margin: 0;
+            text-align: center;
+        }
+
+        .judul2 {
+            margin: 0;
+            font-size: 14px;
+            color: gray;
+            text-align: center;
+        }
+
+        .text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .btndetail {
+            display: block;
+            margin: 20px auto;
+            padding: 8px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor:pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .btndetail:hover {
+            background-color: #0056b3;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .modaldetail {
+            background: white;
+            margin: 8% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px;
+            text-align: center;
+            opacity: 0;
+            transform: scale(0.7);
+            transition: all 0.5s ease;
+        }
+
+        .modal.show .modaldetail {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .exit {
+            float: right;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .judulpop {
+            margin: 0%;
+            text-align: center;
+        }
+
+        .rating {
+            display: flex;
+            gap: 3px;
+            margin-top: 8px;
+            font-size: 25px;
+            color: #FFD700;
+            justify-content: center;
+            margin-bottom: 4px;
+        }
+
+        .star {
+            cursor: default;
+        }
+
+        .btn-cancel {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-left: 10px;
+            transition: 0.3s ease;
+            position: fixed;
+            bottom: 10px;
+            right: 20px;
+        }
+
+        .btn-cancel:hover {
+            background-color: #b02a37;
+        }
+
+        .modal2 {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .modaldetail2 {
+            background: #fff;
+            margin: 5% auto;
+            padding: 20px;
+            border-radius: 12px;
+            width: 60%;
+            max-width: 700px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .exit2 {
+            float: right;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .exit2:hover {
+            color: red;
+        }
+
+        /* Responsive Design */
         @media (max-width: 900px) {
             .navbar {
                 flex-direction: column;
@@ -815,188 +997,23 @@
             .portfolio-grid {
                 grid-template-columns: 1fr;
             }
+
+            .portfolio-container {
+                padding: 20px;
+            }
+
+            .project-content {
+                padding: 20px;
+            }
+            .modaldetail2 {
+                width: 90%;
+            }
         }
-
-        /* Ariel - Memperbaiki penempatan dan styling untuk container testimonial */
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 8px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #ddd;
-            margin-bottom: 15px;
-        }
-
-        /* Ariel - Menambahkan styling untuk gambar user */
-        .gambaruser {
-            width: 60px;
-            border-radius: 50%;
-        }
-
-        /* Ariel - Menambahkan styling untuk gambar user yang lebih besar */
-        .gambaruser2 {
-            width: 100px;
-            border-radius: 50%;
-            margin-bottom: 0%;
-        }
-
-        /* Ariel - Memperbaiki styling untuk judul */
-        .judul {
-            margin: 0;
-            text-align: center;
-        }
-
-        /* Ariel - Memperbaiki styling untuk subjudul */
-        .judul2 {
-            margin: 0;
-            font-size: 14px;
-            color: gray;
-            text-align: center;
-        }
-
-        /* Ariel - Menambahkan styling untuk text container */
-        .text {
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Ariel - Menambahkan styling untuk tombol detail */
-        .btndetail {
-            display: block;
-            margin: 20px auto;
-            padding: 8px 15px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            cursor:pointer;
-            font-size: 16px;
-            transition: 0.3s;
-        }
-
-        .btndetail:hover {
-            background-color: #0056b3;
-        }
-
-        /* Ariel - Menambahkan styling untuk modal */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.5);
-        }
-
-        /* Ariel - Menambahkan styling untuk detail modal */
-        .modaldetail {
-            background: white;
-            margin: 8% auto;
-            padding: 20px;
-            border-radius: 10px;
-            width: 400px;
-            text-align: center;
-            opacity: 0;
-            transform: scale(0.7);
-            transition: all 0.5s ease;
-        }
-
-        .modal.show .modaldetail {
-            opacity: 1;
-            transform: scale(1);
-        }
-
-        /* Ariel - Menambahkan styling untuk tombol exit */
-        .exit {
-            float: right;
-            font-size: 20px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        /* Ariel - Menambahkan styling untuk judul popup */
-        .judulpop {
-            margin: 0%;
-            text-align: center;
-        }
-
-        /* Ariel - Menambahkan styling untuk rating */
-        .rating {
-            display: flex;
-            gap: 3px;
-            margin-top: 8px;
-            font-size: 25px;
-            color: #FFD700;
-            justify-content: center;
-            margin-bottom: 4px;
-        }
-
-        .star {
-            cursor: default;
-        }
-
-        /* Ariel - Menambahkan styling untuk tombol cancel */
-        .btn-cancel {
-            background-color: #dc3545;
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 14px;
-            margin-left: 10px;
-            transition: 0.3s ease;
-            position: fixed;
-            bottom: 10px;
-            right: 20px;
-        }
-
-        .btn-cancel:hover {
-            background-color: #b02a37;
-        }
-
-        /* 2 */
-        .modal2 {
-        display: none;
-        position: fixed;
-        z-index: 1000;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgba(0,0,0,0.5);
-}
-
-/* Isi popup */
-.modaldetail2 {
-  background: #fff;
-  margin: 5% auto;
-  padding: 20px;
-  border-radius: 12px;
-  width: 60%;
-  max-width: 700px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-  animation: fadeIn 0.3s ease-in-out;
-}
-.exit2 {
-  float: right;
-font-size: 20px;
-font-weight: bold;
-cursor: pointer;
-}
-.exit2:hover {
-  color: red;
-}
-
     </style>
 </head>
 
 <body>
+<!-- Navbar -->
 <nav class="navbar">
     <div class="navbar-brand">
         <div class="logo">N</div>
@@ -1013,8 +1030,11 @@ cursor: pointer;
     </ul>
 </nav>
 
+<!-- Home Section -->
 <section id="home" class="landing-page">
     <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
@@ -1059,6 +1079,7 @@ cursor: pointer;
     </div>
 </section>
 
+<!-- Stats Section -->
 <section class="stats-section">
     <div class="stats-container">
         <div class="stat-item">
@@ -1080,10 +1101,8 @@ cursor: pointer;
     </div>
 </section>
 
+<!-- Team Section -->
 <section id="team" class="team-section">
-    <div class="shape"></div>
-    <div class="shape"></div>
-
     <div class="team-container">
         <div class="section-header">
             <h2>Our Expert Team</h2>
@@ -1129,17 +1148,19 @@ cursor: pointer;
     </div>
 </section>
 
+<!-- About Section -->
 <section id="about" class="about-section">
     <div class="about-content">
         <h2>About NexusTech</h2>
         <p>Founded in 2025, NexusTech has been at the forefront of digital innovation, helping businesses transform their operations through cutting edge technology solutions. Our team of experts combines technical excellence with deep industry knowledge to deliver result that.</p>
         <p>Our mission is simple : to be the trusted partner that empowers businesses, from ambitious startups to global enterprises, to navigate digital complexity and achieve sustainable growth.</p>
-        <p>We believe in  uilding long-term partnerships with our clients, understanding their unique challenges, and delivering solutions what drive real business value. Our approach combines creativity, technical expertise, and a commitment to excellence in everything we do.</p>
-        <p>Our core expertise spans Clous Transformation, Data Analytics & AI, and Beskope Software development, ensuring we provide a holistic and future-proof strategy for your digital journey.</p>
+        <p>We believe in building long-term partnerships with our clients, understanding their unique challenges, and delivering solutions what drive real business value. Our approach combines creativity, technical expertise, and a commitment to excellence in everything we do.</p>
+        <p>Our core expertise spans Cloud Transformation, Data Analytics & AI, and Bespoke Software development, ensuring we provide a holistic and future-proof strategy for your digital journey.</p>
         <p>From startups to Fortune 500 companies, we've helped organizations across various industries leverage technology to achieve their goals and stay ahead in today's competitive landscape.</p>
     </div>
 </section>
 
+<!-- Portfolio Section -->
 <section id="portfolio" class="portfolio-section">
     <div class="portfolio-container">
         <div class="section-header">
@@ -1149,12 +1170,14 @@ cursor: pointer;
         <div class="portfolio-grid">
             <!-- Project 1 -->
             <div class="project-card">
-                    <h1 class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
-                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
-                    </svg></h1>
-                <div class="tulisan">    
-                <h2>E-Commerce Platform</h2>
-                <p>A comprehensive online shopping solution with advanced inventory management and payment integration.</p>
+                <div class="project-image">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                    </svg>
+                </div>
+                <div class="project-content">
+                    <h2>E-Commerce Platform</h2>
+                    <p>A comprehensive online shopping solution with advanced inventory management and payment integration.</p>
                     <div class="tags">
                         <span class="tag">Web Development</span>
                         <span class="tag">E-Commerce</span>
@@ -1165,13 +1188,15 @@ cursor: pointer;
 
             <!-- Project 2 -->
             <div class="project-card">
-                <h1 class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16">
-                    <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                    <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
-                    </svg></h1>
-                <div class="tulisan">
-                <h2>Health & Fitness App</h2>
-                <p>A mobile application for tracking workouts, nutrition, and health metrics with personalized recommendations.</p>
+                <div class="project-image">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16">
+                        <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                        <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+                    </svg>
+                </div>
+                <div class="project-content">
+                    <h2>Health & Fitness App</h2>
+                    <p>A mobile application for tracking workouts, nutrition, and health metrics with personalized recommendations.</p>
                     <div class="tags">
                         <span class="tag">Mobile App</span>
                         <span class="tag">Health Tech</span>
@@ -1182,12 +1207,14 @@ cursor: pointer;
 
             <!-- Project 3 -->
             <div class="project-card">
-                <h1 class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-bar-chart-fill" viewBox="0 0 16 16">
-                    <path d="M1 11a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1zm5-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1z"/>
-                    </svg></h1>
-                <div class="tulisan">
-                <h2>Business Analytics Dashboard</h2>
-                <p>Real-time data visualization and reporting tools for business intelligence and decision making.</p>
+                <div class="project-image">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-bar-chart-fill" viewBox="0 0 16 16">
+                        <path d="M1 11a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1zm5-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1z"/>
+                    </svg>
+                </div>
+                <div class="project-content">
+                    <h2>Business Analytics Dashboard</h2>
+                    <p>Real-time data visualization and reporting tools for business intelligence and decision making.</p>
                     <div class="tags">
                         <span class="tag">Data Analytics</span>
                         <span class="tag">Dashboard</span>
@@ -1197,147 +1224,18 @@ cursor: pointer;
             </div>
         </div>
     </div>
-</body>
- <style>
-        /* Reset and base styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color:  #333;
-            background-color: #f8f9fa;
-            padding: 20px;
-        }
-
-        .portfolio-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        /* Header styles */
-        header {
-            text-align: center;
-            margin-bottom: 50px;
-            padding: 30px 0;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            color: #0b85ff;
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            color: #7f8c8d;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* Portfolio grid */
-        .portfolio-grid {
-            display: grid;
-            flex-wrap: wrap;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
-        }
-
-        /* Project card styles */
-        .project-card {
-            width: 100%;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .project-card .tulisan {
-            padding: 20px ;
-        }
-        
-        .project-card .logo {
-            border-top-left-radius: 8px;
-            border-top-right-radius: 8px;
-            color: white;
-            display: flex;
-            gap: 0;
-            justify-content: center; 
-            align-items: center;     
-            height: 150px;           
-            background: linear-gradient(45deg, #87c3ff, #0059b3);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .project-card h2 {
-            color: #2c3e50;
-            margin-bottom: 15px;
-            font-size: 1.5rem;
-        }
-
-        .project-card p {
-            color: #000000;
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-        /* Tags styles */
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .tag {
-            background-color: #69b0f7;
-            color: #495057;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .portfolio-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            header h1 {
-                font-size: 2rem;
-            }
-            
-            .subtitle {
-                font-size: 1rem;
-            }
-        }
-    </style>
-    </div>
 </section>
 
+<!-- Testimonials Section -->
 <section id="testimonials" class="testimonials-section">
-    <div class="shape"></div>
-    <div class="shape"></div>
-
     <div class="testimonials-container">
         <div class="section-header">
             <h2>Client Testimonials</h2>
             <p>See what our clients have to say about working with us</p>
         </div>
 
-
-<!-- 1 -->
         <div class="testimonials">
+            <!-- Testimonial 1 -->
             <div class="testimonial-card">
                 <div class="container">
                     <img src="https://img.freepik.com/vektor-gratis/lingkaran-biru-dengan-pengguna-putih_78370-4707.jpg" alt="" class="gambaruser">
@@ -1353,43 +1251,11 @@ cursor: pointer;
                         </div>
                     </div>
                 </div>
-
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam ipsa magni dolorum, repellat eveniet distinctio iusto molestiae aperiam tempora quaerat aliquid est voluptatibus quasi ipsum unde eaque! Ipsum, molestias. Tenetur!</p>
-                <br>
                 <button class="btndetail" id="openModal">Lihat Lebih Detail &nbsp;<i class="fas fa-chevron-right"></i></button>
             </div>
 
-            <div id="myModal" class="modal">
-                <div class="modaldetail">
-                    <span class="exit" id="closeModal">&times;</span>
-
-                    <div class="container">
-                        <img src="https://img.freepik.com/vektor-gratis/lingkaran-biru-dengan-pengguna-putih_78370-4707.jpg" alt="" class="gambaruser2">
-                        <div class="text">
-                            <h2 class="judulpop">Letjen Mas Tirtodarmo</h2>
-                            <p class="judul2">CEO, techsolution Inc.</p>
-                        </div>
-                        <div class="rating">
-                            <span class="star">&#9733;</span>
-                            <span class="star">&#9733;</span>
-                            <span class="star">&#9733;</span>
-                            <span class="star">&#9733;</span>
-                            <span class="star">&#9734;</span>
-                        </div>
-                    </div>
-
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium eum cupiditate accusamus dolore, a reprehenderit in architecto, iste rerum iusto eos unde omnis, nam quae quisquam cumque temporibus similique inventore?</p>
-                    <br>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio, iusto non distinctio magni error hic qui aliquid explicabo quas tempore recusandae, aut dolores. Vero id facilis enim cum repellat hic.</p>
-                    <br>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eius, fugit sapiente aspernatur molestiae sit perspiciatis earum quisquam ea libero nobis, rerum neque. Nobis voluptate nulla, repudiandae tenetur molestiae ut.</p>
-                    <br><br>
-                    <button id="cancelModal" class="btn-cancel">Cancel</button>
-                </div>
-            </div>
-
-<!-- 2 -->
-
+            <!-- Testimonial 2 -->
             <div class="testimonial-card">
                 <div class="container">
                     <img src="https://img.freepik.com/vektor-gratis/lingkaran-biru-dengan-pengguna-putih_78370-4707.jpg" alt="" class="gambaruser">
@@ -1405,47 +1271,16 @@ cursor: pointer;
                         </div>
                     </div>
                 </div>
-                <br>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero ipsum sed, perferendis, consequuntur deleniti culpa velit sit ratione at odit consectetur est iure quidem itaque commodi quibusdam architecto optio dolor.</p>
-           <br>
                 <button class="btndetail" id="openModal2">Lihat Lebih Detail &nbsp;<i class="fas fa-chevron-right"></i></button>
             </div>
-            <div id="myModal2" class="modal2">
-                <div class="modaldetail2">
-                    <span class="exit2" id="closeModal2">&times;</span>
 
-                    <div class="container">
-                        <img src="https://img.freepik.com/vektor-gratis/lingkaran-biru-dengan-pengguna-putih_78370-4707.jpg" alt="" class="gambaruser2">
-                        <div class="text">
-                            <h2 class="judulpop">Letjen Mas Tirtodarmo</h2>
-                            <p class="judul2">CEO, techsolution Inc.</p>
-                        </div>
-                        <div class="rating">
-                            <span class="star">&#9733;</span>
-                            <span class="star">&#9733;</span>
-                            <span class="star">&#9733;</span>
-                            <span class="star">&#9733;</span>
-                            <span class="star">&#9734;</span>
-                        </div>
-                    </div>
-
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium eum cupiditate accusamus dolore, a reprehenderit in architecto, iste rerum iusto eos unde omnis, nam quae quisquam cumque temporibus similique inventore?</p>
-                    <br>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio, iusto non distinctio magni error hic qui aliquid explicabo quas tempore recusandae, aut dolores. Vero id facilis enim cum repellat hic.</p>
-                    <br>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eius, fugit sapiente aspernatur molestiae sit perspiciatis earum quisquam ea libero nobis, rerum neque. Nobis voluptate nulla, repudiandae tenetur molestiae ut.</p>
-                    <br><br>
-                    <button id="cancelModal2" class="btn-cancel">Cancel</button>
-                </div>
-            </div>
-            
-<!-- 3 -->
-
-                          <div class="testimonial-card">
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card">
                 <div class="container">
                     <img src="https://img.freepik.com/vektor-gratis/lingkaran-biru-dengan-pengguna-putih_78370-4707.jpg" alt="" class="gambaruser">
                     <div class="text">
-                         <h3 class="judul">Jenderal Ahmad Yani</h3>
+                        <h3 class="judul">Jenderal Ahmad Yani</h3>
                         <p class="judul2">CEO, techsolution Inc.</p>
                         <div class="rating">
                             <span class="star">&#9733;</span>
@@ -1456,16 +1291,13 @@ cursor: pointer;
                         </div>
                     </div>
                 </div>
-                <br>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero ipsum sed, perferendis, consequuntur deleniti culpa velit sit ratione at odit consectetur est iure quidem itaque commodi quibusdam architecto optio dolor.</p>
-           <br>
-                <button class="btndetail" id="openModal">Lihat Lebih Detail &nbsp;<i class="fas fa-chevron-right"></i></button>
+                <button class="btndetail" id="openModal3">Lihat Lebih Detail &nbsp;<i class="fas fa-chevron-right"></i></button>
             </div>
 
-<!-- 4 -->
-
+            <!-- Testimonial 4 -->
             <div class="testimonial-card">
-              <div class="container">
+                <div class="container">
                     <img src="https://img.freepik.com/vektor-gratis/lingkaran-biru-dengan-pengguna-putih_78370-4707.jpg" alt="" class="gambaruser">
                     <div class="text">
                         <h3 class="judul">Letjen Soeprapto</h3>
@@ -1477,17 +1309,15 @@ cursor: pointer;
                             <span class="star">&#9733;</span>
                             <span class="star">&#9734;</span>
                         </div>
-                    </div></div>
-                <br>
+                    </div>
+                </div>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel sed voluptates quae consequatur autem in at, sit soluta commodi quibusdam incidunt fugit dignissimos iste delectus facilis officia porro natus ratione.</p>
-           <br>
-                <button class="btndetail" id="openModal">Lihat Lebih Detail &nbsp;<i class="fas fa-chevron-right"></i></button>
+                <button class="btndetail" id="openModal4">Lihat Lebih Detail &nbsp;<i class="fas fa-chevron-right"></i></button>
             </div>
 
-<!-- 5 -->
-
+            <!-- Testimonial 5 -->
             <div class="testimonial-card">
-              <div class="container">
+                <div class="container">
                     <img src="https://img.freepik.com/vektor-gratis/lingkaran-biru-dengan-pengguna-putih_78370-4707.jpg" alt="" class="gambaruser">
                     <div class="text">
                         <h3 class="judul">Brigjen Sutoyo</h3>
@@ -1499,17 +1329,15 @@ cursor: pointer;
                             <span class="star">&#9733;</span>
                             <span class="star">&#9734;</span>
                         </div>
-                    </div></div>
-                <br>
+                    </div>
+                </div>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel sed voluptates quae consequatur autem in at, sit soluta commodi quibusdam incidunt fugit dignissimos iste delectus facilis officia porro natus ratione.</p>
-            <br>
-                <button class="btndetail" id="openModal">Lihat Lebih Detail &nbsp;<i class="fas fa-chevron-right"></i></button>
+                <button class="btndetail" id="openModal5">Lihat Lebih Detail &nbsp;<i class="fas fa-chevron-right"></i></button>
             </div>
 
-<!-- 6 -->
-
+            <!-- Testimonial 6 -->
             <div class="testimonial-card">
-                   <div class="container">
+                <div class="container">
                     <img src="https://img.freepik.com/vektor-gratis/lingkaran-biru-dengan-pengguna-putih_78370-4707.jpg" alt="" class="gambaruser">
                     <div class="text">
                         <h3 class="judul">Pierre Andreas</h3>
@@ -1521,16 +1349,16 @@ cursor: pointer;
                             <span class="star">&#9733;</span>
                             <span class="star">&#9734;</span>
                         </div>
-                    </div></div>
-                <br>
+                    </div>
+                </div>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel sed voluptates quae consequatur autem in at, sit soluta commodi quibusdam incidunt fugit dignissimos iste delectus facilis officia porro natus ratione.</p>
-            <br>
-                <button class="btndetail" id="openModal">Lihat Lebih Detail &nbsp;<i class="fas fa-chevron-right"></i></button>
+                <button class="btndetail" id="openModal6">Lihat Lebih Detail &nbsp;<i class="fas fa-chevron-right"></i></button>
             </div>
         </div>
     </div>
 </section>
 
+<!-- Contact Section -->
 <section id="contact" class="contact-section">
     <div class="contact-container">
         <div class="section-header">
@@ -1566,6 +1394,7 @@ cursor: pointer;
     </div>
 </section>
 
+<!-- Footer -->
 <footer class="page-footer">
     <p>&copy; 2025 NexusTech. All rights reserved.</p>
     <p>Innovative Technology Solutions</p>
@@ -1576,12 +1405,64 @@ cursor: pointer;
     </ul>
 </footer>
 
+<!-- Testimonial Modals -->
+<!-- Modal 1 -->
+<div id="myModal" class="modal">
+    <div class="modaldetail">
+        <span class="exit" id="closeModal">&times;</span>
+        <div class="container">
+            <img src="https://img.freepik.com/vektor-gratis/lingkaran-biru-dengan-pengguna-putih_78370-4707.jpg" alt="" class="gambaruser2">
+            <div class="text">
+                <h2 class="judulpop">Letjen Mas Tirtodarmo</h2>
+                <p class="judul2">CEO, techsolution Inc.</p>
+            </div>
+            <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9734;</span>
+            </div>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium eum cupiditate accusamus dolore, a reprehenderit in architecto, iste rerum iusto eos unde omnis, nam quae quisquam cumque temporibus similique inventore?</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio, iusto non distinctio magni error hic qui aliquid explicabo quas tempore recusandae, aut dolores. Vero id facilis enim cum repellat hic.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eius, fugit sapiente aspernatur molestiae sit perspiciatis earum quisquam ea libero nobis, rerum neque. Nobis voluptate nulla, repudiandae tenetur molestiae ut.</p>
+        <button id="cancelModal" class="btn-cancel">Cancel</button>
+    </div>
+</div>
+
+<!-- Modal 2 -->
+<div id="myModal2" class="modal2">
+    <div class="modaldetail2">
+        <span class="exit2" id="closeModal2">&times;</span>
+        <div class="container">
+            <img src="https://img.freepik.com/vektor-gratis/lingkaran-biru-dengan-pengguna-putih_78370-4707.jpg" alt="" class="gambaruser2">
+            <div class="text">
+                <h2 class="judulpop">Letjen Siswondo P.</h2>
+                <p class="judul2">CEO, techsolution Inc.</p>
+            </div>
+            <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9734;</span>
+            </div>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium eum cupiditate accusamus dolore, a reprehenderit in architecto, iste rerum iusto eos unde omnis, nam quae quisquam cumque temporibus similique inventore?</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio, iusto non distinctio magni error hic qui aliquid explicabo quas tempore recusandae, aut dolores. Vero id facilis enim cum repellat hic.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eius, fugit sapiente aspernatur molestiae sit perspiciatis earum quisquam ea libero nobis, rerum neque. Nobis voluptate nulla, repudiandae tenetur molestiae ut.</p>
+        <button id="cancelModal2" class="btn-cancel">Cancel</button>
+    </div>
+</div>
+
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const navLinks = document.querySelectorAll('.navbar-nav a');
         const particlesContainer = document.getElementById('particles');
         const contactBtn = document.getElementById('contact-btn');
 
+        // Create particles
         function createParticles() {
             for (let i = 0; i < 30; i++) {
                 const particle = document.createElement('div');
@@ -1605,6 +1486,7 @@ cursor: pointer;
 
         createParticles();
 
+        // Animate counters
         function animateCounter(element, finalValue, duration = 2000) {
             let start = 0;
             const increment = finalValue / (duration / 16);
@@ -1637,6 +1519,7 @@ cursor: pointer;
 
         observer.observe(document.querySelector('.stats-section'));
 
+        // Navigation active state
         window.addEventListener('scroll', function() {
             const scrollPos = window.scrollY + 100;
 
@@ -1649,6 +1532,7 @@ cursor: pointer;
             });
         });
 
+        // Smooth scrolling for navigation
         navLinks.forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -1664,6 +1548,7 @@ cursor: pointer;
             });
         });
 
+        // Contact button scroll
         contactBtn.addEventListener('click', function() {
             const contactSection = document.getElementById('contact');
             if (contactSection) {
@@ -1674,34 +1559,74 @@ cursor: pointer;
             }
         });
 
-        // Ariel - Menambahkan fungsi untuk modal testimonial
-        // 1
+        // Testimonial modal functionality
+        // Modal 1
         const modal = document.getElementById("myModal");
         const btn = document.getElementById("openModal");
         const span = document.getElementById("closeModal");
         const cancelBtn = document.getElementById("cancelModal");
 
-        btn.onclick = function() {
-            modal.style.display = "block";
-            setTimeout(() => {
-                modal.classList.add("show");
-            }, 10);
+        if (btn) {
+            btn.onclick = function() {
+                modal.style.display = "block";
+                setTimeout(() => {
+                    modal.classList.add("show");
+                }, 10);
+            }
         }
 
-        span.onclick = function() {
-            modal.classList.remove("show");
-            setTimeout(() => {
-                modal.style.display = "none";
-            }, 300);
+        if (span) {
+            span.onclick = function() {
+                modal.classList.remove("show");
+                setTimeout(() => {
+                    modal.style.display = "none";
+                }, 300);
+            }
         }
 
-        cancelBtn.onclick = function() {
-            modal.classList.remove("show");
-            setTimeout(() => {
-                modal.style.display = "none";
-            }, 300);
+        if (cancelBtn) {
+            cancelBtn.onclick = function() {
+                modal.classList.remove("show");
+                setTimeout(() => {
+                    modal.style.display = "none";
+                }, 300);
+            }
         }
 
+        // Modal 2
+        const modal2 = document.getElementById("myModal2");
+        const btn2 = document.getElementById("openModal2");
+        const close2 = document.getElementById("closeModal2");
+        const cancel2 = document.getElementById("cancelModal2");
+
+        if (btn2) {
+            btn2.onclick = function() {
+                modal2.style.display = "block";
+                setTimeout(() => {
+                    modal2.classList.add("show");
+                }, 10);
+            }
+        }
+
+        if (close2) {
+            close2.onclick = function() {
+                modal2.classList.remove("show");
+                setTimeout(() => {
+                    modal2.style.display = "none";
+                }, 300);
+            }
+        }
+
+        if (cancel2) {
+            cancel2.onclick = function() {
+                modal2.classList.remove("show");
+                setTimeout(() => {
+                    modal2.style.display = "none";
+                }, 300);
+            }
+        }
+
+        // Close modals when clicking outside
         window.onclick = function(event) {
             if (event.target === modal) {
                 modal.classList.remove("show");
@@ -1709,43 +1634,14 @@ cursor: pointer;
                     modal.style.display = "none";
                 }, 300);
             }
-        }
-   
-
-    // 2
-
-const modal2 = document.getElementById("myModal2");
-const btn2 = document.getElementById("openModal2");
-const close2 = document.getElementById("closeModal2");
-const cancel2 = document.getElementById("cancelModal2");
-btn2.onclick = function() {
-            modal2.style.display = "block";
-            setTimeout(() => {
-                modal2.classList.add("show");
-            }, 10);
-        }
-  close2.onclick = function() {
-            modal2.classList.remove("show");
-            setTimeout(() => {
-                modal2.style.display = "none";
-            }, 300);
-        }
-
-cancel2.onclick = function() {
-            modal2.classList.remove("show");
-            setTimeout(() => {
-                modal2.style.display = "none";
-            }, 300);
-        }
-
-        window.onclick = function(event) {
             if (event.target === modal2) {
                 modal2.classList.remove("show");
                 setTimeout(() => {
                     modal2.style.display = "none";
-                },300);}
-} });
-
+                }, 300);
+            }
+        }
+    });
 </script>
 </body>
 </html>
