@@ -930,14 +930,30 @@
         .modaldetail2 {
             background: #fff;
             margin: 5% auto;
+<<<<<<< HEAD:TugasAkhir.html
           padding: 20px;
             border-radius: 10px;
             width: 400px;
+=======
+            padding: 20px;
+            border-radius: 12px;
+            width: 60%;
+>>>>>>> 48c5c4a10aa780ca507d05f412ef40027cdf4d4d:public/index.html
             max-width: 700px;
             box-shadow: 0 8px 20px rgba(0,0,0,0.3);
             animation: fadeIn 0.3s ease-in-out;
         }
 
+<<<<<<< HEAD:TugasAkhir.html
+=======
+        .exit2 {
+            float: right;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+>>>>>>> 48c5c4a10aa780ca507d05f412ef40027cdf4d4d:public/index.html
         .exit2:hover {
             color: red;
         }
@@ -1009,9 +1025,9 @@
 <nav class="navbar">
     <div class="navbar-brand">
         <img
-         src="LogoNexus.png"
-         alt="NexusTech Logo"
-         style="width: 80px; height: 80px; margin-right: 10px;"
+                src="LogoNexus.png"
+                alt="NexusTech Logo"
+                style="width: 80px; height: 80px; margin-right: 10px;"
         />
         <span>NexusTech</span>
     </div>
@@ -1371,7 +1387,7 @@
                     <p><strong>Address</strong></p>
                     <p>Jl locari Desa Sumber Sekar</p>
                     <p>Kec Dau Kab Malang</p>
-                </div>  
+                </div>
             </div>
 
             <div class="contact-item">
@@ -1401,9 +1417,9 @@
                 <div class="contact-text">
                     <p><strong>Working Hours</strong></p>
                     <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                </div>
             </div>
         </div>
-    </div>
 </section>
 
 <!-- Footer -->
@@ -1464,7 +1480,7 @@
                 <span class="star">&#9734;</span>
             </div>
         </div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium eum cupiditate accusamus dolore, a reprehenderit in architecto, iste rerum iusto eos unde omnis, nam quae quisquam cumque temporibus similique inventore?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium eum cupiditate accusamus dolore, a reprehenderit in architecto, iste rerum iusto eos unde omnis, nam quae quisquam cumque temporibus similique inventore?</p>
         <br>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio, iusto non distinctio magni error hic qui aliquid explicabo quas tempore recusandae, aut dolores. Vero id facilis enim cum repellat hic.</p>
         <br>
@@ -1480,28 +1496,28 @@
         const contactBtn = document.getElementById('contact-btn');
 
         // Create particles
-        function createParticles() {
-            for (let i = 0; i < 30; i++) {
-                const particle = document.createElement('div');
-                particle.classList.add('particle');
+        // function createParticles() {
+        //     for (let i = 0; i < 30; i++) {
+        //         const particle = document.createElement('div');
+        //         particle.classList.add('particle');
 
-                const size = Math.random() * 4 + 2;
-                particle.style.width = `${size}px`;
-                particle.style.height = `${size}px`;
+        //         const size = Math.random() * 4 + 2;
+        //         particle.style.width = ${size}px;
+        //         particle.style.height = ${size}px;
 
-                particle.style.left = `${Math.random() * 100}%`;
-                particle.style.top = `${Math.random() * 100}%`;
+        //         particle.style.left = ${Math.random() * 100}%;
+        //         particle.style.top = ${Math.random() * 100}%;
 
-                const duration = Math.random() * 10 + 10;
-                particle.style.animationDuration = `${duration}s`;
+        //         const duration = Math.random() * 10 + 10;
+        //         particle.style.animationDuration = ${duration}s;
 
-                particle.style.animationDelay = `${Math.random() * 5}s`;
+        //         particle.style.animationDelay = ${Math.random() * 5}s;
 
-                particlesContainer.appendChild(particle);
-            }
-        }
+        //         particlesContainer.appendChild(particle);
+        //     }
+        // }
 
-        createParticles();
+        // createParticles();
 
         // Animate counters
         function animateCounter(element, finalValue, duration = 2000) {
